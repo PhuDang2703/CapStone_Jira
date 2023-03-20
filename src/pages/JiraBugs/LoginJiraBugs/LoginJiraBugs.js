@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Input } from 'antd';
-import { UserOutlined, LockOutlined, FacebookOutlined, TwitterOutlined } from '@ant-design/icons';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { withFormik } from 'formik';
 import { connect } from 'react-redux';
 import { signinJirabugAction } from '../../../store/Actions/JiraBugsActions'
@@ -19,9 +19,9 @@ function LoginJiraBugs(props) {
   } = props;
 
   return (
-    <form onSubmit={handleSubmit} className="container mx-auto px-40 " style={{ height: window.innerHeight }} >
-      <div className="pt-44" style={{ height: window.innerHeight }} >
-        <img className='mb-2' style={{ width: 240, marginLeft: 90 }} src='https://wac-cdn.atlassian.com/dam/jcr:ab384028-e8a3-4dd1-8b45-6d564ef7936a/Jira%20Software_24.svg?cdnVersion=861' alt='jira' />
+    <form onSubmit={handleSubmit} className="container w-96" style={{ height: window.innerHeight }} >
+      <div className="pt-52" style={{ height: window.innerHeight }} >
+        <img className='mb-2' style={{ width: 240, marginLeft: 60 }} src='https://wac-cdn.atlassian.com/dam/jcr:ab384028-e8a3-4dd1-8b45-6d564ef7936a/Jira%20Software_24.svg?cdnVersion=861' alt='jira' />
         <div className="d-flex mt-3" >
           <Input onChange={handleChange} style={{ width: '100%', minWidth: 300 }} name="email" size="large" placeholder="email" prefix={<UserOutlined />} />
         </div>
@@ -31,7 +31,7 @@ function LoginJiraBugs(props) {
         </div>
         <div className="text-red-500">{errors.password}</div>
         <div className='flex justify-center'>
-          <Button htmlType="submit" size="large" style={{ minWidth: 420, color: '#fff' }} className="mt-3 bg-sky-600">LOG IN</Button>
+          <Button htmlType="submit" size="large" style={{ width: '100%', color: '#fff' }} className="mt-3 bg-sky-600">LOG IN</Button>
         </div>
 
 
